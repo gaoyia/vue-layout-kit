@@ -1,0 +1,38 @@
+{
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 20,
+    "editor.detectIndentation": true,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    // 默认使用eslint
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": [
+        "source.fixAll.eslint"
+    ],
+    "vue.format.template.initialIndent": true,
+    "eslint.useFlatConfig": true,
+    "eslint.validate": [
+        "javascript",
+        "html",
+        "vue",
+        "typescript"
+    ],
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[vue]": {
+        // "editor.defaultFormatter": "Vue.volar",
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    }
+}

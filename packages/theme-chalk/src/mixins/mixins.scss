@@ -1,0 +1,45 @@
+@use 'config' as *;
+@forward 'config';
+
+@mixin b($block) {
+  $B: $namespace + $namespace-separator + $block;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+// .kit-button.is-desiabled
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+// &__header => .kit-button__header
+@mixin e($element) {
+  @at-root {
+    #{&+$element-separator + $element} {
+      @content;
+    }
+  }
+}
+
+// &--primary => .kit-button--primary
+@mixin m($modifier) {
+  @at-root {
+    #{&+$modifier-separator + $modifier} {
+      @content;
+    }
+  }
+}
+
+@mixin state($state) {
+  $S: $state-prefix + $state;
+
+  &.#{$S} {
+    @content;
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "layout-kit",
+    "private": false,
+    "main": "index.js",
+    "scripts": {
+        "dev": "pnpm -C playground dev",
+        "docs": "pnpm -C docs dev",
+        "build": "gulp -f build/gulpfile.ts default"
+    },
+    "dependencies": {
+        "@types/lodash": "^4.17.14",
+        "@types/lodash-es": "^4.17.12",
+        "lodash": "^4.17.21",
+        "lodash-es": "^4.17.21",
+        "lodash-unified": "^1.0.3"
+    },
+    "devDependencies": {
+        "@eslint/js": "9.18.0",
+        "@stylistic/eslint-plugin": "2.13.0",
+        "@types/gulp": "^4.0.17",
+        "@vue-layout-kit/components": "workspace:*",
+        "@vue-layout-kit/theme-chalk": "workspace:*",
+        "@vue-layout-kit/utils": "workspace:*",
+        "eslint": "9.18.0",
+        "eslint-plugin-vue": "9.32.0",
+        "globals": "15.14.0",
+        "gulp": "^5.0.0",
+        "sucrase": "^3.35.0",
+        "typescript": "5.7.3",
+        "typescript-eslint": "8.20.0"
+    }
+}

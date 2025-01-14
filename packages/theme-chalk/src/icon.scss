@@ -1,0 +1,19 @@
+@use "./mixins/mixins.scss" as *;
+
+@include b(icon) {
+  background-color: cornflowerblue;
+
+  @include e(text) {
+    color: red;
+  }
+
+  @include m(primary) {
+    color: green;
+  }
+
+  @include state(disable) {
+    color: gray;
+    background-color: rgb(44, 44, 44);
+  }
+
+}

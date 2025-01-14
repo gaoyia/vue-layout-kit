@@ -1,0 +1,19 @@
+{
+    "name": "docs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vitepress dev .",
+        "docs:build": "vitepress build docs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "vitepress": "1.5.0",
+        "@vue-layout-kit/components": "workspace:*",
+        "@vue-layout-kit/theme-chalk": "workspace:*",
+        "@vue-layout-kit/utils": "workspace:*"
+    }
+}

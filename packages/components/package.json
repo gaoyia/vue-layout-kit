@@ -1,0 +1,33 @@
+{
+  "name": "@vue-layout-kit/components",
+  "version": "0.0.1",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/gaoyia/vue-layout-kit"
+  },
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "module": "index.mjs",
+  "scripts": {
+    "build": "vue-tsc -b && vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.5.0",
+    "vue-tsc": "^2.2.0",
+    "vue": "^3.5.13"
+  },
+  "dependencies": {
+    "@juggle/resize-observer": "^3.4.0",
+    "@vue/shared": "^3.5.13"
+  }
+}
