@@ -27,6 +27,7 @@ export default defineConfig({
       writeBundle () {
         const destPath = path.resolve(__dirname, "dist", "package.json");
         pkg.name = "vue-layout-kit";
+        pkg.private = false;
         fs.writeFileSync(destPath,JSON.stringify(pkg, null, 2));
       },
     },
