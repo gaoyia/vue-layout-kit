@@ -1,1 +1,4 @@
-export * from "./layout-fit/layout-fit";
+import LayoutFit from "./layout-fit";
+export {
+  LayoutFit,
+};

@@ -33,6 +33,6 @@ export type ResizeData = {
   _entries:ResizeEntries
 };
 export const layoutFitEmits = {
-  resize: (evt: ResizeData) => evt instanceof Event,
+  resize: (evt: ResizeData) => evt instanceof Object,
 };
 export type LayoutFitEmits = typeof layoutFitEmits;

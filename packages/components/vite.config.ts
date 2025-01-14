@@ -27,14 +27,14 @@ export default defineConfig({
       writeBundle () {
         const packageDestPath = path.resolve(__dirname, "dist", "package.json");
         pkg.name = "vue-layout-kit";
-        pkg.private = false;
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        delete pkg.private;
         fs.writeFileSync(packageDestPath,JSON.stringify(pkg, null, 2));
-
-        const licenseFile = path.resolve(__dirname, "LICENSE");
+        const licenseFile = path.resolve(__dirname,"../../", "LICENSE");
         const licenseDistFile = path.resolve(__dirname, "dist", "LICENSE");
-        const readmeFile = path.resolve(__dirname, "README.md");
+        const readmeFile = path.resolve(__dirname,"../../", "README.md");
         const readmeDistFile = path.resolve(__dirname, "dist", "README.md");
-
         fs.copyFileSync(licenseFile, licenseDistFile);
         fs.copyFileSync(readmeFile, readmeDistFile);
       },
@@ -45,16 +45,15 @@ export default defineConfig({
     lib:{
       entry: [
         "index.ts",
-        "layout-fit/layout-fit.ts",
       ],
-      formats: ["es", "cjs"],
-      fileName: (format, entryName) => {
-        const ext = format === "es" ? "mjs" : "js";
-        if (entryName === "index") {
-          return `${entryName}.${format}.${ext}`;
-        }
-        return `${entryName}/${entryName}.${format}.${ext}`;
-      },
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
+      // fileName: (format, entryName) => {
+      //   const ext = format === "es" ? "mjs" : "js";
+      //   if (entryName === "index") {
+      //     return `${entryName}.${format}.${ext}`;
+      //   }
+      //   return `lib/${entryName}/index.${format}.${ext}`;
+      // },
       name: "vue-layout-kit",
     },
     rollupOptions ,

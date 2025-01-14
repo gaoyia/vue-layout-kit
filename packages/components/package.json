@@ -1,6 +1,6 @@
 {
   "name": "@vue-layout-kit/components",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "repository": {
     "type": "github",
     "url": "https://github.com/gaoyia/vue-layout-kit"
@@ -8,9 +8,8 @@
   "private": true,
   "type": "module",
   "description": "",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "module": "index.mjs",
+  "main": "index.umd.js",
+  "module": "index.es.js",
   "scripts": {
     "publish": "npm publish --registry=https://registry.npmjs.org/",
     "build": "vue-tsc -b && vite build"
