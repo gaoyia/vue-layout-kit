@@ -25,10 +25,18 @@ export default defineConfig({
     {
       name: "write-package-file",
       writeBundle () {
-        const destPath = path.resolve(__dirname, "dist", "package.json");
+        const packageDestPath = path.resolve(__dirname, "dist", "package.json");
         pkg.name = "vue-layout-kit";
         pkg.private = false;
-        fs.writeFileSync(destPath,JSON.stringify(pkg, null, 2));
+        fs.writeFileSync(packageDestPath,JSON.stringify(pkg, null, 2));
+
+        const licenseFile = path.resolve(__dirname, "LICENSE");
+        const licenseDistFile = path.resolve(__dirname, "dist", "LICENSE");
+        const readmeFile = path.resolve(__dirname, "README.md");
+        const readmeDistFile = path.resolve(__dirname, "dist", "README.md");
+
+        fs.copyFileSync(licenseFile, licenseDistFile);
+        fs.copyFileSync(readmeFile, readmeDistFile);
       },
     },
   ],
