@@ -7,7 +7,8 @@ export default {
 
   themeConfig: {
     // 主题级选项
-    outDir: "/<repository>/",
+    base: "/<repository>/",
+    outdirt:"../public",
     docsDir: "docs",
     // logo: "/logo.png",
     // 编辑连接
