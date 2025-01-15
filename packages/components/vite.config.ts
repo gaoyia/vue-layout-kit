@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import dts from "vite-plugin-dts";
+// import dts from "vite-plugin-dts";
 import fs from "fs";
 import path from "path";
 import pkg from "./package.json";
@@ -19,8 +19,7 @@ const rollupOptions = {
 export default defineConfig({
   plugins: [
     vue(),
-    dts({ rollupTypes: true,rollupOptions:{
-    } }),
+    // dts({ rollupTypes: true}),
     cssInjectedByJsPlugin(),
     {
       name: "write-package-file",
@@ -31,12 +30,17 @@ export default defineConfig({
         // @ts-ignore
         delete pkg.private;
         fs.writeFileSync(packageDestPath,JSON.stringify(pkg, null, 2));
+        // 复制许可文件
         const licenseFile = path.resolve(__dirname,"../../", "LICENSE");
         const licenseDistFile = path.resolve(__dirname, "dist", "LICENSE");
+        fs.copyFileSync(licenseFile, licenseDistFile);
+        // 复制readme
         const readmeFile = path.resolve(__dirname,"../../", "README.md");
         const readmeDistFile = path.resolve(__dirname, "dist", "README.md");
-        fs.copyFileSync(licenseFile, licenseDistFile);
         fs.copyFileSync(readmeFile, readmeDistFile);
+        // 复制ts声明文件
+        const tsdDistFile = path.resolve(__dirname, "dist", "index.d.ts");
+        fs.writeFileSync(tsdDistFile,"declare module \"vue-layout-kit\";");
       },
     },
   ],

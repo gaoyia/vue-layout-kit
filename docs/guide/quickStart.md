@@ -9,6 +9,7 @@ pnpm i vue-layout-kit
 # or
 yarn add vue-layout-kit
 ```
+## 使用
 
 目前只有一个组件，而且TS的类型定义也不好，我研究研究。
 
