@@ -4,10 +4,9 @@ export default {
   // 站点级选项
   title: "vue-layout-kit",
   description: "vue-layout-kit",
-
+  base: "/<repository>/",
   themeConfig: {
     // 主题级选项
-    base: "/<repository>/",
     outdirt:"../public",
     docsDir: "docs",
     // logo: "/logo.png",
