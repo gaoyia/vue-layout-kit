@@ -5,6 +5,7 @@
     "scripts": {
         "dev": "pnpm -C playground dev",
         "docs": "pnpm -C docs dev",
+        "docs:build": "pnpm run -C docs build",
         "build": "gulp -f build/gulpfile.ts default"
     },
     "dependencies": {
