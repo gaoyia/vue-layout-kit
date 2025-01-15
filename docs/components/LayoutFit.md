@@ -58,7 +58,7 @@ function resize(resizeData) {
         <div style="
             width: 100%;
             height: 100%;
-            background-image: url('./demo.jpg');
+            background: burlywood;
             background-repeat: no-repeat;
             background-size: 100% 100%;
         ">
