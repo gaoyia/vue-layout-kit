@@ -26,7 +26,7 @@ export default {
           text: "指南",
           items: [
             { text: "介绍", link: "/guide/" },
-            { text: "快速上手", link: "/guide/quickstart" },
+            { text: "快速上手", link: "/guide/quickStart" },
           ],
         },
       ],

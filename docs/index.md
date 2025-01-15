@@ -7,8 +7,8 @@ hero:
   tagline: layout-kit
   actions:
     - theme: brand
-      text: quickstart
-      link: /guide/quickstart
+      text: quickStart
+      link: /guide/quickStart
 
 features:
   - icon: 📦
