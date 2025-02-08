@@ -2,6 +2,7 @@
     "name": "layout-kit",
     "private": false,
     "main": "index.js",
+    "homepage":"https://gaoyia.github.io/vue-layout-kit/",
     "scripts": {
         "dev": "pnpm -C playground dev",
         "docs": "pnpm -C docs dev",
